@@ -1,0 +1,550 @@
+.container {
+    max-width: 100%;
+}
+
+.header {
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 280px 1fr 300px;
+    }
+}
+
+/* Instruments Panel */
+.instrumentsPanel {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.categoryTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.categoryTab {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.categoryTab:hover {
+    color: var(--text-primary);
+}
+
+.categoryTab.active {
+    background: var(--bg-white);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.instrumentList {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.instrumentItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.instrumentItem:hover {
+    background: var(--bg-light);
+}
+
+.instrumentItem.selected {
+    background: rgba(255, 207, 0, 0.1);
+    border-left: 3px solid var(--primary-yellow);
+}
+
+.instrumentInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.symbol {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.instrumentName {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+}
+
+.instrumentPrice {
+    text-align: right;
+}
+
+.price {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: background var(--transition-fast);
+}
+
+.price.flash {
+    background: rgba(255, 207, 0, 0.3);
+}
+
+.change {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.change.positive {
+    color: var(--success);
+}
+
+.change.negative {
+    color: var(--error);
+}
+
+/* Chart Panel */
+.chartPanel {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.chartTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.chartSymbol {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.chartName {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.timeframes {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.tfBtn {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-light);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.tfBtn:hover {
+    background: var(--primary-yellow);
+    color: var(--text-primary);
+}
+
+.chart {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(to bottom, var(--bg-light) 0%, var(--bg-white) 100%);
+    display: flex;
+    align-items: flex-end;
+}
+
+.chartSvg {
+    width: 100%;
+    height: 100%;
+}
+
+.chartOverlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.currentPrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.priceBar {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-light);
+}
+
+.priceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.priceLabel {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.priceItem span:last-child {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Order Panel */
+.orderPanel {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+.orderTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.orderTabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.orderTab {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all var(--transition-fast);
+}
+
+.orderTab.active {
+    opacity: 1;
+}
+
+.orderTab.buyTab {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--success);
+}
+
+.orderTab.buyTab.active {
+    background: var(--success);
+    color: white;
+}
+
+.orderTab.sellTab {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--error);
+}
+
+.orderTab.sellTab.active {
+    background: var(--error);
+    color: white;
+}
+
+.priceDisplay {
+    margin-bottom: 1.25rem;
+}
+
+.bidAsk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+}
+
+.bid,
+.ask {
+    text-align: center;
+}
+
+.bidAskLabel {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.bidAskPrice {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.bid .bidAskPrice {
+    color: var(--error);
+}
+
+.ask .bidAskPrice {
+    color: var(--success);
+}
+
+.spreadDisplay {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-white);
+    border-radius: var(--radius-sm);
+}
+
+.orderField {
+    margin-bottom: 1.25rem;
+}
+
+.orderField label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.volumeInput {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.volumeInput button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-light);
+    border: none;
+    cursor: pointer;
+}
+
+.volumeInput button:hover {
+    background: var(--primary-yellow);
+    color: var(--text-primary);
+}
+
+.volumeInput input {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem;
+}
+
+.volumePresets {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.volumePresets button {
+    flex: 1;
+    padding: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-light);
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.volumePresets button:hover {
+    background: var(--primary-yellow);
+    color: var(--text-primary);
+}
+
+.orderSummary {
+    padding: 0.75rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    padding: 0.25rem 0;
+}
+
+.summaryRow span:first-child {
+    color: var(--text-secondary);
+}
+
+.summaryRow span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.executeBtn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.executeBtn.buyBtn {
+    background: var(--success);
+    color: white;
+}
+
+.executeBtn.buyBtn:hover:not(:disabled) {
+    background: #16a34a;
+}
+
+.executeBtn.sellBtn {
+    background: var(--error);
+    color: white;
+}
+
+.executeBtn.sellBtn:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+.executeBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.warning {
+    font-size: 0.75rem;
+    color: var(--warning);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .layout {
+        gap: 0.75rem;
+    }
+
+    .instrumentsPanel {
+        order: 1;
+    }
+
+    .chartPanel {
+        order: 0;
+    }
+
+    .orderPanel {
+        order: 2;
+    }
+
+    .instrumentList {
+        max-height: 200px;
+    }
+
+    .chart {
+        height: 200px;
+    }
+
+    .currentPrice {
+        font-size: 1.25rem;
+    }
+
+    .chartHeader {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .timeframes {
+        flex-wrap: wrap;
+    }
+
+    .priceBar {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .orderPanel {
+        padding: 1rem;
+    }
+
+    .bidAskPrice {
+        font-size: 1rem;
+    }
+}

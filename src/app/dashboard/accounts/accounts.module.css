@@ -1,0 +1,316 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+}
+
+.newBtn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.newBtn:hover {
+    background: var(--primary-yellow-hover);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+/* Empty State */
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.emptyIcon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.empty h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.empty p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+.createBtn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.createBtn:hover {
+    background: var(--primary-yellow-hover);
+    color: var(--text-primary);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.count {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.noAccounts {
+    padding: 2rem;
+    background: var(--bg-white);
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.noAccounts a {
+    color: var(--info);
+}
+
+/* Accounts Grid */
+.accountsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .accountsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .accountsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.accountCard {
+    position: relative;
+    padding: 1.5rem;
+    background: var(--bg-white);
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.accountCard:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.accountCard.selected {
+    border-color: var(--primary-yellow);
+    background: linear-gradient(to bottom, rgba(255, 207, 0, 0.05), transparent);
+}
+
+.accountCard.demoCard {
+    border-style: dashed;
+}
+
+.demoBadge {
+    position: absolute;
+    top: -10px;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--info);
+    color: white;
+    border-radius: var(--radius-full);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.accountType {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.typeIcon {
+    font-size: 2rem;
+}
+
+.typeName {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.platform {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-white);
+    background: var(--text-primary);
+    padding: 0.125rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.activeBadge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--success);
+    color: white;
+    border-radius: var(--radius-full);
+}
+
+.cardBalance {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.balanceLabel {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.balanceValue {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.detail span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.detail strong {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.cardActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.depositBtn,
+.withdrawBtn,
+.tradeBtn {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.depositBtn {
+    background: var(--primary-yellow);
+    color: var(--text-primary);
+    border: none;
+}
+
+.depositBtn:hover {
+    background: var(--primary-yellow-hover);
+    color: var(--text-primary);
+}
+
+.withdrawBtn {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+.withdrawBtn:hover {
+    border-color: var(--text-primary);
+}
+
+.tradeBtn {
+    background: var(--text-primary);
+    color: var(--text-white);
+    border: none;
+}
+
+.tradeBtn:hover {
+    background: var(--primary-dark-hover);
+}

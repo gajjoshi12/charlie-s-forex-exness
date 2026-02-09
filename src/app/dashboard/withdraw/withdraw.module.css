@@ -1,0 +1,411 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.empty p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.createBtn {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.accountSelect {
+    margin-bottom: 2rem;
+}
+
+.accountCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+}
+
+.accountInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.accountType {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.accountNumber {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+.balanceInfo {
+    text-align: right;
+}
+
+.balanceLabel {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.accountBalance {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--success);
+}
+
+.methods {
+    margin-bottom: 2rem;
+}
+
+.methodsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .methodsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.methodCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background: var(--bg-white);
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.methodCard input {
+    display: none;
+}
+
+.methodCard:hover {
+    border-color: var(--border-medium);
+}
+
+.methodCard.selected {
+    border-color: var(--primary-yellow);
+    background: rgba(255, 207, 0, 0.05);
+}
+
+.methodIcon {
+    font-size: 1.75rem;
+}
+
+.methodName {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.methodTime {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.continueBtn,
+.withdrawBtn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.continueBtn:hover:not(:disabled),
+.withdrawBtn:hover:not(:disabled) {
+    background: var(--primary-yellow-hover);
+}
+
+.continueBtn:disabled,
+.withdrawBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.amountStep {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+.selectedMethod {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.selectedMethod strong {
+    color: var(--text-primary);
+}
+
+.balanceDisplay {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+}
+
+.balanceDisplay span {
+    color: var(--text-secondary);
+}
+
+.balanceDisplay strong {
+    color: var(--success);
+}
+
+.amountField {
+    margin-bottom: 0.75rem;
+}
+
+.amountInput {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.amountInput input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+}
+
+.amountInput input:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 207, 0, 0.2);
+}
+
+.errorText {
+    font-size: 0.8125rem;
+    color: var(--error);
+    margin-top: 0.5rem;
+}
+
+.maxBtn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--info);
+    background: transparent;
+    border: 1px dashed var(--info);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: all var(--transition-fast);
+}
+
+.maxBtn:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.summary {
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+}
+
+.summaryRow.total {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-top: 1px solid var(--border-light);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.backBtn {
+    flex: 1;
+    padding: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+.withdrawBtn {
+    flex: 2;
+}
+
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.successIcon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--success);
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.success h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.success p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.successDetails {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+}
+
+.detailRow span {
+    color: var(--text-secondary);
+}
+
+.detailRow strong {
+    color: var(--text-primary);
+}
+
+.pending {
+    color: var(--warning) !important;
+}
+
+.doneBtn {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+}

@@ -1,0 +1,511 @@
+.main {
+    padding-top: var(--header-height);
+}
+
+/* Hero Section */
+.hero {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heroContent {
+    flex: 1;
+    max-width: 600px;
+}
+
+.heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.highlight {
+    color: var(--primary-yellow);
+    background: linear-gradient(135deg, #FFCF00 0%, #FF9500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.heroCta {
+    display: flex;
+    gap: 1rem;
+}
+
+.btnPrimary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.btnPrimary:hover {
+    background: var(--primary-yellow-hover);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+.btnOutline {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: transparent;
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.btnOutline:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.heroVisual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tradingCard {
+    padding: 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    min-width: 280px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pair {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.change {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--success);
+    background: rgba(34, 197, 94, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+}
+
+.cardPrice {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cardSpread {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.cardSpread strong {
+    color: var(--primary-yellow);
+}
+
+/* Stats Section */
+.stats {
+    background: var(--bg-dark);
+    padding: 4rem 2rem;
+}
+
+.statsGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-yellow);
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-size: 0.9375rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .featuresGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.featureCard {
+    padding: 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.featureCard:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.featureText {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Account Types Section */
+.accountTypes {
+    padding: 6rem 2rem;
+    background: var(--bg-light);
+}
+
+.accountCategory {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+}
+
+.categoryTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.accountGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .accountGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .accountGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.accountCard {
+    padding: 2rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.accountCard:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: var(--shadow-lg);
+}
+
+.accountCard.proPlan {
+    border-color: var(--primary-yellow);
+    background: linear-gradient(to bottom, rgba(255, 207, 0, 0.05), transparent);
+}
+
+.accountIcon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.accountName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.accountDesc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.accountDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+}
+
+.detailRow span {
+    color: var(--text-secondary);
+}
+
+.detailRow strong {
+    color: var(--text-primary);
+}
+
+.accountBtn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.accountBtn:hover {
+    background: var(--primary-yellow-hover);
+    color: var(--text-primary);
+}
+
+/* CTA Section */
+.cta {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #2D2D2D 100%);
+}
+
+.ctaTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.ctaText {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.ctaBtn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-yellow);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.ctaBtn:hover {
+    background: var(--primary-yellow-hover);
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .heroContent {
+        max-width: 100%;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+
+    .heroCta {
+        justify-content: center;
+    }
+
+    .heroVisual {
+        order: -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .heroCta {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tradingCard {
+        min-width: 240px;
+        padding: 1.5rem;
+    }
+
+    .cardPrice {
+        font-size: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.75rem;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .stats {
+        padding: 3rem 1rem;
+    }
+
+    .features {
+        padding: 4rem 1rem;
+    }
+
+    .sectionHeader {
+        margin-bottom: 2rem;
+    }
+
+    .accountTypes {
+        padding: 4rem 1rem;
+    }
+
+    .categoryTitle {
+        font-size: 1.25rem;
+    }
+
+    .cta {
+        padding: 4rem 1rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.75rem;
+    }
+
+    .ctaBtn {
+        padding: 0.875rem 2rem;
+        width: 100%;
+        max-width: 280px;
+    }
+}
