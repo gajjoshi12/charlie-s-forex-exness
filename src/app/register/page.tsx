@@ -104,7 +104,7 @@ export default function RegisterPage() {
         <div className={styles.container}>
             <div className={styles.left}>
                 <Link href="/" className={styles.logo}>
-                    exness
+                    nNexness
                 </Link>
                 <div className={styles.content}>
                     <div className={styles.steps}>

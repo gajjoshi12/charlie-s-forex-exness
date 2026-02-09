@@ -9,10 +9,10 @@ export default function Footer() {
                 <div className={styles.top}>
                     <div className={styles.brand}>
                         <Link href="/" className={styles.logo}>
-                            <span className={styles.logoText}>exness</span>
+                            <span className={styles.logoText}>nNexness</span>
                         </Link>
                         <p className={styles.description}>
-                            Exness is a global multi-asset broker with offices around the world.
+                            nNexness is a global multi-asset broker with offices around the world.
                             We provide access to global markets and intuitive trading platforms.
                         </p>
                     </div>
@@ -84,7 +84,7 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.legal}>
-                        <p>© 2024 Exness Clone. All rights reserved.</p>
+                        <p>© 2024 nNexness Clone. All rights reserved.</p>
                         <div className={styles.legalLinks}>
                             <Link href="/privacy">Privacy Agreement</Link>
                             <Link href="/risk-disclosure">Risk Disclosure</Link>

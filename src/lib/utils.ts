@@ -1,4 +1,4 @@
-// Utility functions for the Exness clone
+// Utility functions for the nNexness clone
 
 /**
  * Format currency with symbol

@@ -55,7 +55,7 @@ export default function AboutPage() {
                 {/* Hero Section */}
                 <section className={styles.hero}>
                     <div className={styles.heroContent}>
-                        <h1>About Exness</h1>
+                        <h1>About nNexness</h1>
                         <p>
                             We're on a mission to make professional trading accessible to everyone,
                             everywhere. Since 2008, we've been building the most reliable and

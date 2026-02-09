@@ -35,7 +35,7 @@ export default function LoginPage() {
         <div className={styles.container}>
             <div className={styles.left}>
                 <Link href="/" className={styles.logo}>
-                    exness
+                    nNexness
                 </Link>
                 <div className={styles.content}>
                     <h1 className={styles.title}>Welcome back</h1>

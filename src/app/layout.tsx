@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Exness | Forex Trading Platform",
-  description: "Trade forex, commodities, indices, and cryptocurrencies with Exness. Low spreads, fast execution, and 24/7 support.",
+  title: "nNexness | Forex Trading Platform",
+  description: "Trade forex, commodities, indices, and cryptocurrencies with nNexness. Low spreads, fast execution, and 24/7 support.",
   keywords: "forex, trading, MT4, MT5, CFD, crypto, commodities, indices",
 };
 

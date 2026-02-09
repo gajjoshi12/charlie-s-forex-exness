@@ -1,0 +1,229 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Floating Symbols */
+.floatingSymbol {
+    position: absolute;
+    top: -50px;
+    font-size: 2rem;
+    opacity: 0.1;
+    animation: floatDown 20s linear infinite;
+    color: var(--primary-yellow);
+    text-shadow: 0 0 20px rgba(255, 207, 0, 0.5);
+}
+
+@keyframes floatDown {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    90% {
+        opacity: 0.15;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Glowing Orbs */
+.orb {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 207, 0, 0.15) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+    filter: blur(40px);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Grid Overlay */
+.gridOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(255, 207, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 207, 0, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(60px);
+    }
+}
+
+/* Globe */
+.globeContainer {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    opacity: 0.15;
+}
+
+.globe {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 207, 0, 0.3);
+    position: relative;
+    animation: rotateGlobe 30s linear infinite;
+    perspective: 1000px;
+}
+
+.globeInner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.globeLine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255, 207, 0, 0.4), transparent);
+    transform-origin: center center;
+}
+
+.globeLineH {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, rgba(255, 207, 0, 0.4), transparent);
+}
+
+@keyframes rotateGlobe {
+    0% {
+        transform: rotateY(0deg) rotateX(15deg);
+    }
+
+    100% {
+        transform: rotateY(360deg) rotateX(15deg);
+    }
+}
+
+/* Floating Price Tickers */
+.tickerFloat {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 207, 0, 0.2);
+    border-radius: 12px;
+    animation: floatTicker 6s ease-in-out infinite;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tickerFloat:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.tickerFloat:nth-child(6) {
+    animation-delay: 4s;
+}
+
+@keyframes floatTicker {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.tickerPair {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05em;
+}
+
+.tickerPrice {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'SF Mono', 'Monaco', monospace;
+}
+
+.tickerUp {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #22c55e;
+}
+
+.tickerDown {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ef4444;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .globeContainer {
+        display: none;
+    }
+
+    .tickerFloat {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .floatingSymbol {
+        font-size: 1.5rem;
+    }
+
+    .orb {
+        width: 150px;
+        height: 150px;
+    }
+}

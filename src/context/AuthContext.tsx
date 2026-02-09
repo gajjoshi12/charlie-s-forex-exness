@@ -6,8 +6,8 @@ import { storage, generateId, delay } from '@/lib/utils';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const AUTH_STORAGE_KEY = 'exness_auth';
-const USERS_STORAGE_KEY = 'exness_users';
+const AUTH_STORAGE_KEY = 'nNexness_auth';
+const USERS_STORAGE_KEY = 'nNexness_users';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [user, setUser] = useState<User | null>(null);

@@ -7,7 +7,7 @@ import { useAuth } from './AuthContext';
 
 const AccountContext = createContext<AccountContextType | undefined>(undefined);
 
-const ACCOUNTS_STORAGE_KEY = 'exness_accounts';
+const ACCOUNTS_STORAGE_KEY = 'nNexness_accounts';
 
 export function AccountProvider({ children }: { children: React.ReactNode }) {
     const { user } = useAuth();
@@ -60,7 +60,7 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
             currency,
             balance: isDemo ? 10000 : 0,
             leverage: '1:Unlimited',
-            server: `Exness-${serverPrefix}-${serverType}`,
+            server: `nNexness-${serverPrefix}-${serverType}`,
             createdAt: new Date().toISOString(),
             isDemo,
         };

@@ -15,7 +15,7 @@ export default function DashboardHeader() {
         <header className={styles.header}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <span className={styles.logoText}>exness</span>
+                    <span className={styles.logoText}>nNexness</span>
                 </Link>
 
                 <div className={styles.banner}>

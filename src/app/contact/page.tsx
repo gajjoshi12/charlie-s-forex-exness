@@ -54,7 +54,7 @@ export default function ContactPage() {
                         <div className={styles.contactMethod}>
                             <span>📧</span>
                             <div>
-                                <strong>support@exness.com</strong>
+                                <strong>support@nNexness.com</strong>
                                 <p>Response within 2 hours</p>
                             </div>
                         </div>

@@ -58,7 +58,7 @@ const testimonials = [
     {
         name: 'James Miller',
         role: 'IB Partner, UK',
-        quote: 'The transparency and reliability of Exness partnership program is unmatched. My earnings have tripled in the past year.',
+        quote: 'The transparency and reliability of nNexness partnership program is unmatched. My earnings have tripled in the past year.',
     },
     {
         name: 'Maria Santos',
