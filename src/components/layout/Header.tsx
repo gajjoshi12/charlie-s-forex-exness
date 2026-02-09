@@ -66,16 +66,16 @@ export default function Header() {
             <div className={`${styles.mobileDrawer} ${mobileMenuOpen ? styles.open : ''}`}>
                 <nav className={styles.mobileNav}>
                     <Link href="/markets" className={styles.mobileNavLink} onClick={closeMenu}>
-                        <span>📊</span> Markets
+                        Markets
                     </Link>
                     <Link href="/about" className={styles.mobileNavLink} onClick={closeMenu}>
-                        <span>ℹ️</span> About
+                        About
                     </Link>
                     <Link href="/partnership" className={styles.mobileNavLink} onClick={closeMenu}>
-                        <span>🤝</span> Partnership
+                        Partnership
                     </Link>
                     <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>
-                        <span>📧</span> Contact
+                        Contact
                     </Link>
                 </nav>
 

@@ -2,14 +2,11 @@
 
 import styles from './FloatingElements.module.css';
 
-const forexSymbols = ['$', '€', '£', '¥', '₿', '📈', '📊', '💹'];
-const currencies = ['USD', 'EUR', 'GBP', 'BTC', 'JPY'];
-
 export default function FloatingElements() {
     return (
         <div className={styles.container}>
-            {/* Floating currency symbols */}
-            {forexSymbols.map((symbol, i) => (
+            {/* Floating currency symbols - text only, no emojis */}
+            {['$', '€', '£', '¥', '₿', '$', '€', '£'].map((symbol, i) => (
                 <div
                     key={i}
                     className={styles.floatingSymbol}

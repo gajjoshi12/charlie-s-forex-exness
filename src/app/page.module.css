@@ -172,16 +172,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--primary-yellow);
 }
 
-.trustItem span {
-    font-size: 1.25rem;
+.trustItem svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary-yellow);
 }
 
 .trustItem p {
     font-size: 0.8125rem;
     color: var(--text-secondary);
     font-weight: 500;
+    margin: 0;
 }
 
 /* Hero Visual */
@@ -310,7 +314,14 @@
 }
 
 .floatingIcon {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 207, 0, 0.15);
+    border-radius: var(--radius-md);
+    color: var(--primary-yellow);
 }
 
 .floatingCard strong {
